@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex | Explorador Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <div class="marca"><span class="pokebola" aria-hidden="true"></span><span>POKÉDEX <small>EXPLORADOR POKÉMON</small></span></div>
+      <span class="etiqueta">Projeto Node.js + Express</span>
+    </header>
+    <section class="intro">
+      <p class="sobretitulo">DESCUBRA O UNIVERSO POKÉMON</p>
+      <h1>Encontre seu próximo <span>Pokémon favorito.</span></h1>
+      <p>Pesquise pelo nome ou número na Pokédex e descubra seus tipos e sua aparência.</p>
+      <form id="form-busca" class="busca">
+        <label class="sr-only" for="termo">Nome ou número do Pokémon</label>
+        <input id="termo" type="text" placeholder="Ex.: pikachu, charizard ou 25" maxlength="50" autocomplete="off" required>
+        <button type="submit">🔎 Buscar Pokémon</button>
+      </form>
+      <button type="button" id="aleatorio" class="aleatorio">🎲 Surpreenda-me com um Pokémon</button>
+    </section>
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite">Pesquise um Pokémon para começar!</p>
+    <section id="resultado" class="resultado" hidden aria-label="Resultado da pesquisa">
+      <div class="imagem-area"><img id="imagem" alt="Imagem do Pokémon"></div>
+      <div class="detalhes"><p id="numero" class="numero"></p><h2 id="nome"></h2><p class="rotulo">TIPOS</p><div id="tipos" class="tipos"></div><p class="nota">Informações fornecidas pela PokéAPI por meio do nosso servidor.</p></div>
+    </section>
+    <section class="historico-secao"><div class="historico-cabecalho"><h2>Pesquisas recentes</h2><button type="button" id="limpar">Limpar histórico</button></div><div id="historico" class="historico"><p class="vazio">Nenhuma pesquisa ainda.</p></div></section>
+    <footer>Feito com HTML, CSS, JavaScript, Node.js, Express e PokéAPI.</footer>
+  </main>
+</body>
+</html>
